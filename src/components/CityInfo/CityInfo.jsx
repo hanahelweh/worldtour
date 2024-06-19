@@ -29,11 +29,7 @@ function CityInfo() {
                 <div>{currentCity.notes}</div>
             </div>
             }
-            <div className={styles.info}>
-                <div className={styles.sub_title}>Learn More</div>
-                <div style={{color:'orange', textDecoration:'underline'}}>Check out {currentCity.name} on wikipedia</div>
-            </div>
-            <div className={styles.back_btn} onClick={()=>navigate(-1)}>back</div>
+            <div className='btn' onClick={()=>navigate(-1)}>back</div>
         </div>
     )
 }

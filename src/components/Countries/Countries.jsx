@@ -1,6 +1,5 @@
 import { UseCities } from "../../context/CitiesContext";
 import Country from "../Country/Country";
-import styles from './Countries.module.css';
 
 function Countries() {
     const {cities} = UseCities();

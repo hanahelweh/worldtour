@@ -1,8 +1,9 @@
 .city_container{
-    background-color: black;
+    background-color: rgb(29, 29, 29);
     width: 100%;
     margin-bottom: 10px;
     text-align: left;
+    border-radius: 10px;
 }
 
 .city{
@@ -18,7 +19,8 @@
     bottom: 0;
     left: 0;
     width: 5px;
-    background-color: green;
+    background-color: rgb(87, 43, 126);
+    border-radius: 10px 0 0 10px;
 }
 .date{
     font-size: 13px;
@@ -36,7 +38,7 @@
     transform: translateY(-50%);
 }
 .deletebtn:hover{
-    background-color: green;
+    background-color: rgb(87, 43, 126);
 }
 .deletespan{
     position: absolute;

@@ -1,7 +1,8 @@
 .form{
-    background-color: black;
+    background-color: rgb(29, 29, 29);
     padding: 20px;
     width: 100%;
+    border-radius: 10px;
 }
 .input{
     line-height: 34px;
@@ -11,6 +12,7 @@
     width: 100%;
     margin-top: 10px;
     font-size: 14px;
+    background-color: white;
 }
 .btn_container{
     display: flex;
@@ -26,4 +28,12 @@
 }
 :global(.react-datepicker-wrapper){
     width: 100%;
+}
+.flag{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-25%);
+    z-index: 1000;
+    font-size: 22px;
 }

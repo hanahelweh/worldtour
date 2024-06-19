@@ -10,7 +10,7 @@ function City({city}) {
         DeleteCity(id)
     }
     return (
-        <div className={styles.city_container} style={currentCity.id === city.id ? {border:'2px solid green'} : {}}>
+        <div className={styles.city_container} style={currentCity.id === city.id ? {border:'2px solid rgb(87, 43, 126)'} : {}}>
             <NavLink to={`${city.id}?lat=${city.position.lat}&lng=${city.position.lng}`}>
                 <div className={styles.city}>
                     <div className='grid'>

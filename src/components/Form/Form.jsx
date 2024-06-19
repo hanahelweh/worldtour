@@ -66,8 +66,10 @@ function Form() {
             <div>
                 <label>
                     City Name
-                    <input type="text" value={cityName} onChange={(e)=>setCityName(e.target.value)} className={styles.input}/>
-                    <span>{emoji}</span>
+                    <div>
+                        <span className={styles.flag}>{emoji}</span>
+                        <input type="text" value={cityName} onChange={(e)=>setCityName(e.target.value)} className={styles.input}/>
+                    </div>
                 </label>
             </div>
             <div style={{marginTop:'20px'}}>
@@ -83,8 +85,8 @@ function Form() {
                 </label>
             </div>
             <div className={styles.btn_container}>
-                <div className={styles.btn} style={{backgroundColor:'grey'}} onClick={()=>navigate(-1)}>back</div>
-                <button className={styles.btn} style={{backgroundColor:'green'}}>Add</button>
+                <div className='btn' style={{backgroundColor:'grey'}} onClick={()=>navigate(-1)}>back</div>
+                <button className='btn'>Add</button>
             </div>
         </form>
     )

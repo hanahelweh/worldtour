@@ -1,23 +1,80 @@
 .side{
     width: 450px;
-    background-color: rgb(29, 29, 29);
+    background-color: black;
     color: whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;
+    transition: all 0.3s ease-in-out;
 }
 .switch{
     margin-top: 30px;
     background-color: rgba(128, 128, 128, 0.344);
     margin-bottom: 50px;
+    border-radius: 5px;
 }   
 .switch a{
     padding: 8px 15px;
+    border-radius: 5px;
 }
 .switch div{
     padding: 8px 0;
 }
 .switch :global(.active){
-    background-color: black;
+    background-color: rgb(29, 29, 29);
+}
+.logo{
+    background-image: url('../../home-img.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 1/1;
+    width: 100%;
+    max-width: 100px;
+}
+.close_btn{
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: rgb(87, 43, 126);
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+}
+.close_span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-60%);
+}
+.media_open_dash{
+    display: none;
+}
+@media all and (max-width:768px){
+    .side{
+        width: 100%;
+        position: absolute;
+        left: -100%;
+        top: 0;
+        bottom: 0;
+        z-index: 2000;
+    }
+    .side.opened{
+        left: 0;
+    }
+    .media_open_dash{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgb(87, 43, 126);
+        z-index: 1000;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+        color: whitesmoke;
+        left: -5px;
+    }
 }

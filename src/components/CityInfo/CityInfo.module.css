@@ -1,7 +1,8 @@
 .city_info{
-    background-color: black;
+    background-color: rgb(29, 29, 29);
     padding: 20px;
     width: 100%;
+    border-radius: 10px;
 }
 .sub_title{
     font-size: 10px;
@@ -12,10 +13,4 @@
 }
 .info{
     margin-bottom: 20px;
-}
-.back_btn{
-    padding: 5px 10px;
-    background-color: grey;
-    display: inline-block;
-    cursor: pointer;
 }

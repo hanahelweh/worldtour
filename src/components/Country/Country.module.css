@@ -1,9 +1,10 @@
 .country_container{
     padding: 10px;
     width: 50%;
+     border-radius: 10px;
 }
 .country{
-    background-color: black;
+    background-color: rgb(29, 29, 29);
     padding: 20px;
     text-align: center;
 }
@@ -14,5 +15,6 @@
     top: 0;
     bottom: 0;
     width: 4px;
-    background-color: green;
+    background-color: rgb(87, 43, 126);
+    border-radius: 10px 0 0 10px;
 }
