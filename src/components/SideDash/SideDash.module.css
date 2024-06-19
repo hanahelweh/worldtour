@@ -1,0 +1,23 @@
+.side{
+    width: 450px;
+    background-color: rgb(29, 29, 29);
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+.switch{
+    margin-top: 30px;
+    background-color: rgba(128, 128, 128, 0.344);
+    margin-bottom: 50px;
+}   
+.switch a{
+    padding: 8px 15px;
+}
+.switch div{
+    padding: 8px 0;
+}
+.switch :global(.active){
+    background-color: black;
+}

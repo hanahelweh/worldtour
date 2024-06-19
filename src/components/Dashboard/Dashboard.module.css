@@ -1,0 +1,5 @@
+.dashboard{
+    min-height: 100vh;
+    display: flex;
+    color: black;
+}

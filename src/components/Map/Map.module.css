@@ -1,0 +1,21 @@
+.map_container{
+    width: calc(100% - 450px);
+    min-height: 100vh;
+}
+.map{
+    height: 100%;
+}
+.getMyPosition_btn{
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+}

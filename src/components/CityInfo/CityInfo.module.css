@@ -1,0 +1,21 @@
+.city_info{
+    background-color: black;
+    padding: 20px;
+    width: 100%;
+}
+.sub_title{
+    font-size: 10px;
+    color: grey;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.info{
+    margin-bottom: 20px;
+}
+.back_btn{
+    padding: 5px 10px;
+    background-color: grey;
+    display: inline-block;
+    cursor: pointer;
+}

@@ -1,0 +1,29 @@
+.form{
+    background-color: black;
+    padding: 20px;
+    width: 100%;
+}
+.input{
+    line-height: 34px;
+    padding: 0 10px;
+    outline: 0;
+    border: 0;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.btn_container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.btn{
+    padding: 5px 10px;
+    outline: 0;
+    cursor: pointer;
+    border: none;
+}
+:global(.react-datepicker-wrapper){
+    width: 100%;
+}
