@@ -5,10 +5,10 @@ function Navbar() {
         <div className={styles.nav_container}>
             <div className='flexi'>
                 <div className={styles.navbar}>
-                    {/* <NavLink to="/">
+                    <NavLink to="/">
                         <div className={styles.logo}></div>
-                    </NavLink> */}
-                    {/* <div className='flex gap'>
+                    </NavLink>
+                    <div className='flex gap'>
                         <NavLink to="/pricing">
                             <div>Pricing</div>
                         </NavLink>
@@ -18,7 +18,7 @@ function Navbar() {
                         <NavLink to="/login">
                             <div>Login</div>
                         </NavLink>
-                    </div> */}
+                    </div>
                 </div>
             </div>
         </div>
