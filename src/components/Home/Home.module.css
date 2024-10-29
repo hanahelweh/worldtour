@@ -6,7 +6,7 @@
     background-color: black;
 }
 .image{
-    background-image: url('home-img.png');
+    background-image: url('/home-img.png');
     aspect-ratio: 1/0.7;
     background-size: contain;
     background-repeat: no-repeat;
