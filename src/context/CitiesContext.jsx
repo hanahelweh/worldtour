@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
+import supabase from "../supabase";
 const CitiesContext = createContext();
 const initialState={
     cities:[],
@@ -28,11 +29,10 @@ function CitiesProvider({children}){
     async function GetCities(){
         try{
             dispatch({type:'loading'});
-            const res=await fetch("http://localhost:8000/cities");
-            if (!res.ok) {
-                throw new Error(`HTTP error! status: ${res.status}`);
+            const {data,error} = await supabase.from('cities').select('*');
+            if (error) {
+                throw new Error('Something went wrong',error);
             }
-            const data = await res.json();
             dispatch({type:'getCities_success',payload:data})
         }catch(error){
             console.log(error);
@@ -44,11 +44,10 @@ function CitiesProvider({children}){
         if(Number(id)===currentCity.id) return;
         try{
             dispatch({type:'loading'});
-            const res=await fetch(`http://localhost:8000/cities/${id}`);
-            if (!res.ok) {
-                throw new Error(`HTTP error! status: ${res.status}`);
+            const {data,error} = await supabase.from('cities').select('*').eq('id', id).single();
+            if (error) {
+                throw new Error('Something went wrong',error);
             }
-            const data = await res.json();
             dispatch({type:'currentCity_success',payload:data})
         }catch(error){
             console.log(error);
@@ -59,13 +58,13 @@ function CitiesProvider({children}){
     async function AddCity(city){
         try{
             dispatch({type:'loading'});
-            const res=await fetch('http://localhost:8000/cities',{
-                method:"POST",
-                body:JSON.stringify(city),
-                headers:{"Content-Type":"application/json"}
-            });
-            const data = await res.json();
-            dispatch({type:'city_created',payload:data})
+            const {data,error} = await supabase.from('cities').insert([city]).select();
+            if (error) {
+                throw new Error('Something went wrong',error);
+            }
+            console.log(data)
+            dispatch({type:'city_created',payload:data[0]})
+            
         }catch(error){
             console.log(error);
         }finally{
@@ -75,9 +74,11 @@ function CitiesProvider({children}){
     async function DeleteCity(id){
         try{
             dispatch({type:'loading'});
-            const res=await fetch(`http://localhost:8000/cities/${id}`,{
-                method:"DELETE",
-            });
+            const {data,error} = await supabase.from('cities').delete().eq("id",id);
+            if (error) {
+                throw new Error('Something went wrong',error);
+            }
+            console.log(data)
             dispatch({type:'city_deleted',payload:id})
         }catch(error){
             console.log(error);

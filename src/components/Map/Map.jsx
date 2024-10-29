@@ -6,6 +6,7 @@ import { UseCities } from '../../context/CitiesContext';
 import {useGeolocation} from '../../hooks/UseGeolocation';
 function Map() {
     const {cities} = UseCities();
+    console.log(cities)
     const [searchParams,setSearchParams] = useSearchParams();
     const lat=searchParams.get("lat");
     const lng=searchParams.get("lng");
